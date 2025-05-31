@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Alüna</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo3.png" alt="Logo Aluna" class="logoaluna">
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">CATÁLOGO</a></li>
+        <li><a href="sobre-nosotros.html">SOBRE NOSOTROS</a></li> <!-- Nueva sección -->
+        <li><a href="contacto.html">CONTACTO</a></li>
+        <li><a href="carrito.html">CARRITO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="titulo-producto">Catálogo de Productos</h2>
+    <section id="productos-container" class="productos"></section>
+  </main>
+
+  <script>
+    // vestidos cortos
+    const productos = {
+      vestidoverde: {
+        img: "img/vestidoverde.png",
+        descripcion: "Vestido elegante para ocasiones especiales",
+        precio: "$59.99"
+      },
+      vestidocelestecorto: {
+        img: "img/vestidocelestecorto.png",
+        descripcion: "Vestido negro corto casual",
+        precio: "$64.99"
+      },
+       vestidorojocortomangalarga: {
+        img: "img/vestidorojocortomangalarga.png",
+        descripcion: "Vestido rojo manga manga larga",
+        precio: "$49.99"
+      },
+
+      vestidocortoamarillo: {
+        img: "img/vestidocortoamarillo.png",
+        descripcion: "Vestido amarillo corto",
+        precio: "$49.99"
+      },
+
+      //vestidos largos
+
+      vestidolargo: {
+        img: "img/vestidolargo.png",
+        descripcion: "Vestido verde largo",
+        precio: "$54.99"
+      },
+      vestidonegro: {
+        img: "img/vestidonegrolargo.png",
+        descripcion: "vestido negro elegante largo",
+        precio: "$34.99"
+      },
+      vestidoverdelargo: {
+        img: "img/vestidoverdeclarolargo.png",
+        descripcion: "Vestido verde largo",
+        precio: "$49.99"
+      },
+      vestidonegromangalargacorto: {
+        img: "img/vestidonegromangalargacorto.png",
+        descripcion: "Vestido negro para eventos especiales",
+        precio: "$64.99"
+      },
+
+      //blusas 
+      blusamorada: {
+        img: "img/blusamorada.png",
+        descripcion: "Blusa morada sin mangas",
+        precio: "$34.99"
+      },
+
+blusaazul: {
+        img: "img/blusaazul.png",
+        descripcion: "Blusa azul asimétrica",
+        precio: "$39.99"
+      },
+      blusamoradasinmangas: {
+        img: "img/blusamoradasinmangas.png",
+        descripcion: "blusa morada sin mangas",
+        precio: "$49.99"
+      },
+blusaencaje: {
+        img: "img/blusaencaje.png",
+        descripcion: "Blusa de encaje casual",
+        precio: "$29.99"
+      },
+      
+
+      //faldas
+
+      faldanegracorta: {
+        img: "img/faldanegracorta.png",
+        descripcion: "Falda negra corta",
+        precio: "$49.99"
+      },
+
+      faldavinotinto: {
+        img: "img/faldavinotinto.png",
+        descripcion: "Falda vino tinto de cuero",
+        precio: "$29.99"
+      },
+      
+      faldaverdecorta: {
+        img: "img/faldaverdecorta.png",
+        descripcion: "Falda verde corta",
+        precio: "$54.99"
+      },
+      
+      
+      faldagriscorta: {
+        img: "img/faldagriscorta.png",
+        descripcion: "Falda de tela gris",
+        precio: "$49.99"
+      },
+    
+      //pantalones
+
+     
+      pantalonmorado: {
+        img: "img/pantalonmorado.png",
+        descripcion: "Pantalón ancho morado",
+        precio: "$49.99"
+      },
+
+
+     
+      pantalonmarron: {
+        img: "img/pantalonmarron.png",
+        descripcion: "Pantalón marrón de cuero",
+        precio: "$64.99"
+      },
+      
+      pantalonazul: {
+        img: "img/pantalonazul.png",
+        descripcion: "Pantalón de tela azul",
+        precio: "$49.99"
+      },
+
+
+     
+      jeangrisbotadecampana: {
+        img: "img/jeangrisbotadecampana.png",
+        descripcion: "Jean gris de bota de campana",
+        precio: "$64.99"
+      },
+      
+    };
+
+    // Obtener el parámetro "item" de la URL
+    const params = new URLSearchParams(window.location.search);
+    const item = params.get("item");
+
+    // Seleccionar el contenedor del producto
+    const container = document.getElementById("productos-container");
+    const titulo = document.getElementById("titulo-producto");
+
+    // Mostrar el producto correspondiente o el catálogo completo
+    if (item && productos[item]) {
+      const producto = productos[item];
+      titulo.textContent = "Detalles del Producto";
+      container.innerHTML = `
+        <div class="producto-detalle">
+          <img src="${producto.img}" alt="${producto.descripcion}">
+          <p>${producto.descripcion}</p>
+          <p class="precio">${producto.precio}</p>
+          <button class="btn" onclick="añadirAlCarrito('${item}')">Añadir al carrito</button>
+        </div>
+      `;
+    } else {
+      titulo.textContent = "Catálogo de Productos";
+      container.innerHTML = Object.keys(productos)
+        .map(
+          key => `
+          <div class="prenda-item">
+            <img src="${productos[key].img}" alt="${productos[key].descripcion}">
+            <p>${productos[key].descripcion}</p>
+            <p class="precio">${productos[key].precio}</p>
+            <button class="btn" onclick="añadirAlCarrito('${key}')">Añadir al carrito</button>
+          </div>
+        `
+        )
+        .join("");
+    }
+
+    // Función para añadir productos al carrito
+    function añadirAlCarrito(item) {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(productos[item]);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      alert(`Producto "${productos[item].descripcion}" añadido al carrito.`);
+    }
+  </script>
+
+  <footer>
+  <p>&copy; 2025 Alüna. Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/login" target="_blank" class="social-icon">
+      <img src="img/facebook-icon.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/accounts/login/" target="_blank" class="social-icon">
+      <img src="img/instagram-icon.png" alt="Instagram">
+    </a>
+    <a href="https://twitter.com/login" target="_blank" class="social-icon">
+      <img src="img/x-icon.png" alt="X">
+    </a>
+    <a href="https://www.tiktok.com/login" target="_blank" class="social-icon">
+      <img src="img/tiktok-icon.png" alt="TikTok">
+    </a>
+  </div>
+</footer>
+</body>
+</html>

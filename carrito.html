@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Alüna</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo3.png" alt="Logo Aluna" class="logoaluna">
+    <nav>
+      <ul>
+       <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">CATÁLOGO</a></li>
+        <li><a href="sobre-nosotros.html">SOBRE NOSOTROS</a></li> <!-- Nueva sección -->
+        <li><a href="contacto.html">CONTACTO</a></li>
+        <li><a href="carrito.html">CARRITO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Productos en tu Carrito</h2>
+    <section id="carrito-container" class="productos"></section>
+    <div id="total-container">
+      <h3>Total: <span id="total-precio">$0.00</span></h3>
+    </div>
+  </main>
+
+  <script>
+    // Obtener los productos del carrito desde localStorage
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const container = document.getElementById("carrito-container");
+    const totalPrecio = document.getElementById("total-precio");
+
+    // Función para mostrar los productos en el carrito
+    function mostrarCarrito() {
+      if (carrito.length > 0) {
+        container.innerHTML = carrito
+          .map(
+            (producto, index) => `
+            <div class="prenda-item">
+              <img src="${producto.img}" alt="${producto.descripcion}">
+              <p>${producto.descripcion}</p>
+              <p class="precio">${producto.precio}</p>
+              <button class="btn eliminar-btn" onclick="eliminarDelCarrito(${index})">Eliminar</button>
+            </div>
+          `
+          )
+          .join("");
+
+        // Calcular el total
+        const total = carrito.reduce((sum, producto) => {
+          return sum + parseFloat(producto.precio.replace("$", ""));
+        }, 0);
+        totalPrecio.textContent = `$${total.toFixed(2)}`;
+      } else {
+        container.innerHTML = "<p>Tu carrito está vacío.</p>";
+        totalPrecio.textContent = "$0.00";
+      }
+    }
+
+    // Función para eliminar un producto del carrito
+    function eliminarDelCarrito(index) {
+      carrito.splice(index, 1); // Elimina el producto del carrito
+      localStorage.setItem("carrito", JSON.stringify(carrito)); // Actualiza el localStorage
+      mostrarCarrito(); // Recarga la lista de productos
+    }
+
+    // Mostrar el carrito al cargar la página
+    mostrarCarrito();
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Alüna. Todos los derechos reservados.</p>
+    <p>Dirección: Bucaramanga, Santander, Colombia</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/login" target="_blank" class="social-icon">
+        <img src="img/facebook-icon.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/accounts/login/" target="_blank" class="social-icon">
+        <img src="img/instagram-icon.png" alt="Instagram">
+      </a>
+      <a href="https://twitter.com/login" target="_blank" class="social-icon">
+        <img src="img/x-icon.png" alt="X">
+      </a>
+      <a href="https://www.tiktok.com/login" target="_blank" class="social-icon">
+        <img src="img/tiktok-icon.png" alt="TikTok">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

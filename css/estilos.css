@@ -1,0 +1,1074 @@
+/* Colores principales */
+:root {
+  --color-primario: #f8e1e7; /* Rosado suave */
+  --color-secundario: #ffffff; /* Blanco */
+  --color-texto: #333; /* Gris oscuro */
+  --color-destacado: #d4a5a5; /* Rosado oscuro */
+  --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Tipografía */
+body {
+  font-family: 'Be Vietnam', sans-serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+  background: var(--color-secundario);
+  scroll-behavior: smooth;
+}
+
+/* Estilo global para todos los textos */
+body, h1, h2, h3, h4, h5, h6, p, li, a {
+  font-family: 'Playfair Display', serif; /* Fuente estilizada */
+  font-size: 1.2rem; /* Tamaño base del texto */
+  color: #333; /* Texto gris oscuro */
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+/* Ajustes específicos para títulos */
+h1, h2, h3 {
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: bold; /* Negrita para destacar */
+  margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Ajustes específicos para párrafos */
+p {
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+}
+
+/* Ajustes específicos para enlaces */
+a {
+  text-decoration: none; /* Elimina el subrayado */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+a:hover {
+  color: #555; /* Color más oscuro al pasar el mouse */
+}
+
+/* Header */
+header {
+  background: var(--color-primario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-shadow: 0 2px 8px var(--color-sombra);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  background: var(--color-destacado);
+  color: var(--color-secundario);
+  transform: translateY(-3px);
+}
+
+/* Sección de introducción */
+.sobre-nosotros-intro {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-primario);
+  color: var(--color-texto);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 12px var(--color-sombra);
+}
+
+.sobre-nosotros-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sobre-nosotros-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Visión y Misión */
+.vision-mision {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-secundario);
+  color: var(--color-texto);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 12px var(--color-sombra);
+}
+
+.vision-mision h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.vision-mision-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.vision, .mision {
+  flex: 1 1 45%;
+  background: var(--color-primario);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--color-sombra);
+  text-align: left;
+}
+
+.vision h3, .mision h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.vision p, .mision p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Historia */
+.historia {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--color-secundario);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 12px var(--color-sombra);
+}
+
+.historia h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.historia p {
+  font-size: 1.2rem;
+  color: var(--color-texto);
+  line-height: 1.8;
+}
+
+/* Valores */
+.valores {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--color-primario);
+  color: var(--color-texto);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 12px var(--color-sombra);
+}
+
+.valores h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+}
+
+.valores li {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Header más estético con color personalizado */
+header {
+  background: #2b2b2b; /* Color de fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  padding: 1rem 2rem;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  gap: 1rem; /* Espacio entre el logo y el menú */
+}
+
+/* Estilo para el logo */
+.logoaluna {
+  height: 70px; /* Tamaño más pequeño */
+  margin: 0; /* Elimina márgenes adicionales */
+  display: block;
+}
+
+/* Navegación con hover animado */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra los elementos del menú */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 1rem; /* Espacio entre los elementos del menú */
+}
+
+nav li {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e4e2dd; /* Color del texto */
+  font-family: 'Be Vietnam', sans-serif; /* Aplica la fuente Be Vietnam */
+  font-weight: bold;
+  display: block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1); /* Color de fondo al pasar el mouse */
+  transform: translateY(-3px);
+}
+
+/* Footer elegante */
+footer {
+  background: #2b2b2b; /* Fondo igual al menú de navegación */
+  color: #e4e2dd; /* Texto claro para contraste */
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.2rem; /* Tamaño de letra más grande */
+  border-top: 2px solid #444; /* Línea superior para separación */
+}
+
+footer p {
+  margin: 0.5rem 0; /* Espaciado entre líneas */
+  font-family: 'Be Vietnam', sans-serif; /* Fuente consistente */
+  color: #e4e2dd; /* Color igual al texto del menú de navegación */
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Espacio entre los íconos */
+}
+
+.social-icon img {
+  width: 50px; /* Tamaño más grande para los íconos */
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Animación de entrada */
+.juego-scratch, .hero, .video-section, .juega-estilo {
+  text-align: center;
+  padding: 2rem 0;
+  background: #e0e0e0;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* Sección de juego Scratch */
+.juego-scratch {
+  text-align: center;
+  padding: 2rem 1.5rem; /* Reduce el relleno */
+  background: linear-gradient(135deg, #2b2b2b); /* Fondo degradado entre gris oscuro, morado y lila */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  margin: 2rem auto;
+  max-width: 800px; /* Reduce el ancho máximo */
+  color: #fff; /* Texto blanco */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+}
+
+.juego-scratch h2 {
+  font-size: 2.2rem; /* Reduce ligeramente el tamaño del título */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.juego-scratch p {
+  font-size: 1.1rem; /* Reduce ligeramente el tamaño del texto */
+  margin-bottom: 1.5rem;
+  color: #fdfdfd;
+}
+
+.iframe-container {
+  position: relative;
+  width: 90%; /* Ajusta el ancho del iframe */
+  max-width: 700px; /* Reduce el ancho máximo del iframe */
+  padding-top: 56.25%; /* Relación de aspecto 16:9 */
+  overflow: hidden;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra para el iframe */
+  background: #fff; /* Fondo blanco para el iframe */
+  margin: 0 auto; /* Centra el iframe horizontalmente */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Elimina el borde del iframe */
+}
+
+/* Mejor apariencia de iframes */
+.juego-scratch iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+/* Títulos más destacados */
+.hero h2, section h2 {
+  font-size: 2.7rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Centrar los títulos de las páginas */
+h2 {
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 2.5rem; /* Ajusta el tamaño del texto */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+  color: #2c3e50; /* Color del texto */
+}
+
+/* Textos principales */
+.hero p {
+  font-size: 1.4rem;
+  color: #555;
+  margin: 0 auto 2.5rem;
+  max-width: 800px;
+}
+
+/* Botones con efecto hover */
+.btn {
+  display: inline-block;
+  background: #888;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Imágenes responsivas con efecto zoom */
+/* Contenedor de la imagen */
+.img-container {
+  position: relative; /* Permite posicionar elementos dentro del contenedor */
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen */
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease; /* Animación suave al pasar el mouse */
+}
+
+/* Animación al pasar el mouse */
+.img-container:hover img {
+  transform: scale(1.1); /* Zoom suave al pasar el mouse */
+}
+
+/* Texto y botón superpuestos */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro (antes era 0.5) */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  color: #e4e2dd; /* Cambiado a color claro */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+  margin-bottom: 1rem;
+}
+
+.overlay-text p {
+  font-size: 1.5rem;
+  color: #e4e2dd; /* Cambiado a color claro */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+  margin-bottom: 1.5rem;
+}
+
+/* Botón estilizado */
+.overlay-text .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #f39c12; /* Color vibrante */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-text .btn:hover {
+  background: #d35400; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Sección de prendas destacadas */
+.destacados {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9; /* Fondo claro */
+}
+
+.destacados h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.prendas-container {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que las imágenes se muevan a una nueva fila */
+  gap: 2rem; /* Espacio entre las imágenes */
+  justify-content: flex-start; /* Alinea las imágenes al inicio */
+  overflow-x: auto; /* Agrega un scroll horizontal si las imágenes no caben */
+  padding: 1rem;
+}
+
+.prenda-item {
+  flex: 0 0 auto; /* Asegura que las tarjetas mantengan su tamaño */
+  max-width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prenda-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.prenda-item img {
+  width: 100%;
+  height: 200px; /* Mantiene el tamaño uniforme */
+  object-fit: cover; /* Recorta la imagen proporcionalmente para llenar el espacio */
+}
+
+.prenda-info {
+  padding: 1rem;
+}
+
+.prenda-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.prenda-info .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e74c3c; /* Color rojo para destacar el precio */
+}
+
+/* Secciones */
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sección de propuesta */
+.propuesta {
+  background: #fff; /* Fondo blanco para la sección */
+  padding: 3rem 2rem;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 3rem auto;
+  max-width: 1200px; /* Ancho máximo */
+  text-align: center;
+}
+
+.propuesta h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333; /* Texto gris oscuro */
+}
+
+.propuesta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555; /* Texto gris medio */
+}
+
+.propuesta ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.propuesta li {
+  background: #f8e1e7; /* Fondo rosado para los bloques internos */
+  padding: 1.5rem;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para los bloques */
+  flex: 1 1 250px; /* Ajusta el tamaño de los bloques */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.propuesta li:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.propuesta li strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333; /* Texto gris oscuro */
+}
+
+.cta-container {
+  margin-top: 2rem;
+}
+
+.cta-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #555; /* Texto gris medio */
+}
+
+.cta-container .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #333; /* Botón oscuro */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-container .btn:hover {
+  background: #555; /* Botón más claro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Contenedor del video */
+.video-container {
+  position: relative;
+  width: 80%; /* Ajusta el ancho del contenedor */
+  max-width: 800px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+  padding-top: 56.25%; /* Relación de aspecto 16:9 */
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elegante */
+}
+
+/* Estilo del iframe */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Elimina el borde del iframe */
+}
+
+/* Estilo para el catálogo */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.prenda-item {
+  flex: 1 1 250px; /* Ajusta el tamaño de las tarjetas */
+  max-width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prenda-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.prenda-item img {
+  width: auto; /* Ajusta el ancho automáticamente */
+  height: 300px; /* Establece la misma altura que en el carrito */
+  object-fit: cover; /* Recorta la imagen proporcionalmente para llenar el espacio */
+  border-radius: 8px; /* Redondea las esquinas */
+  display: block; /* Asegura que las imágenes se comporten como bloques */
+  margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+.prenda-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.prenda-item .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.prenda-item .btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.prenda-item .btn:hover {
+  background: #555;
+}
+
+.producto-detalle {
+  text-align: center;
+  padding: 2rem;
+}
+
+.producto-detalle img {
+  width: auto; /* Ajusta el ancho automáticamente */
+  height: 300px; /* Establece la altura fija igual a la del vestido largo */
+  object-fit: cover; /* Recorta la imagen proporcionalmente para llenar el espacio */
+  border-radius: 8px; /* Opcional: redondea las esquinas */
+  display: block; /* Asegura que las imágenes se comporten como bloques */
+  margin: 0 auto; /* Centra las imágenes dentro de su contenedor */
+}
+
+/* Estilo para el carrito */
+#carrito-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#carrito-container .prenda-item {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+#carrito-container .prenda-item img {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#total-container {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Botón de eliminar */
+.eliminar-btn {
+  background: #e74c3c; /* Color rojo para el botón */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.eliminar-btn:hover {
+  background: #c0392b; /* Color más oscuro al pasar el mouse */
+}
+
+/* Sección de contacto */
+.contacto {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.contacto p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formulario-contacto {
+  flex: 1 1 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario-contacto button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2b2b2b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background: #555;
+}
+
+.info-contacto {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.info-contacto h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.info-contacto p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.imagen-contacto {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de Visión y Misión */
+.vision-mision {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f9f9f9; /* Fondo claro */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.vision-mision h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+.vision-mision-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.vision, .mision {
+  flex: 1 1 45%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.vision h3, .mision h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+}
+
+.vision p, .mision p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Sección del avatar de Voki */
+.avatar-voki {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8e1e7; /* Fondo rosado suave */
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-voki h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Texto gris oscuro */
+}
+
+.avatar-voki p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555; /* Texto gris medio */
+}
+
+.voki-container iframe {
+  width: 400px; /* Aumenta el ancho */
+  height: 500px; /* Aumenta la altura */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 0 auto; /* Centra el iframe */
+  border: none; /* Elimina cualquier borde visible */
+}
+
+/* Contenedor principal para Voki y QR */
+.voki-qr-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 2rem;
+  padding: 3rem 2rem;
+  border-radius: 15px; /* Mantiene los bordes redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* QR del catálogo */
+.qr-catalogo {
+  flex: 1;
+  text-align: center;
+  background: #2b2b2b; /* Fondo igual al menú de navegación */
+  padding: 2rem;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  color: #e4e2dd; /* Texto claro para contraste */
+}
+
+.qr-catalogo h2 {
+  font-family: 'Playfair Display', serif; /* Fuente estilizada */
+  font-size: 2.2rem; /* Tamaño del título */
+  margin-bottom: 1rem;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: bold;
+  color: #fff; /* Texto blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.qr-catalogo p {
+  font-size: 1.1rem; /* Tamaño del texto */
+  margin-bottom: 1.5rem;
+  color: #fdfdfd; /* Texto blanco */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.qr-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Sección de Kahoot */
+.kahoot-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f9f9f9; /* Fondo claro */
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.kahoot-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Texto gris oscuro */
+}
+
+.kahoot-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555; /* Texto gris medio */
+}
+
+.kahoot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kahoot-link {
+  text-decoration: none;
+  color: #fff;
+  background: #2b2b2b; /* Fondo oscuro */
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.kahoot-link:hover {
+  background: #444; /* Fondo más claro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.kahoot-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 0.5rem 0;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
